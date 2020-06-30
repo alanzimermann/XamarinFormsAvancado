@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:App05.Controls"
+             x:Class="App05.MainPage">
+
+    <StackLayout>
+        <controls:MyControl Titulo="Titulo X1" TituloCor="Blue" Imagem="logo1.png" Tapped="MyControl_Tapped" />
+        <controls:MyControl Titulo="Titulo X2" TituloCor="Red" Imagem="logo2.png" />
+        <controls:MyControl Titulo="Titulo X3" TituloCor="Green" Imagem="logo3.png" />
+        <controls:MyControl TituloCor="Yellow" />
+    </StackLayout>
+
+</ContentPage>
