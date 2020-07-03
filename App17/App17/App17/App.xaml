@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App17.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Style x:Key="LabelFontStyle" TargetType="Label">
+                <Setter Property="Label.FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <OnPlatform.iOS>Lily of the Valley_Personal_Use</OnPlatform.iOS>
+                        <OnPlatform.Android>LilyoftheValley.ttf#Lily of the Valley_Personal_Use</OnPlatform.Android>
+                        <OnPlatform.WinPhone>Assets/Fonts/LilyoftheValley.ttf#Lily of the Valley_Personal_Use</OnPlatform.WinPhone>
+                    </OnPlatform>
+                </Setter>
+            </Style>            
+        </ResourceDictionary>
+
+	</Application.Resources>
+</Application>
