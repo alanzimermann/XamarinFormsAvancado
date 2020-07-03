@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace App01.Lib
@@ -9,14 +11,14 @@ namespace App01.Lib
     {
         protected override void Invoke(Entry sender)
         {
-            if (sender.Text.IndexOf("@") >= 0)
+            if( sender.Text.IndexOf("@") >= 0)
             {
                 sender.TextColor = Color.Green;
             }
             else
             {
                 sender.TextColor = Color.Red;
-            }
+            }            
         }
     }
 }

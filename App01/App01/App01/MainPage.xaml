@@ -1,36 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:local="clr-namespace:App01"
              xmlns:lib="clr-namespace:App01.Lib"
              x:Class="App01.MainPage">
-
     <StackLayout VerticalOptions="Center">
+    
+        <Label Text="Welcome to Xamarin Forms!" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
         <Entry x:Name="TxtNome" Placeholder="Digite o seu nome" Text="">
             <Entry.Behaviors>
-                <lib:MaiusculoBehavior />
+                <lib:MaisculoBehavior />
             </Entry.Behaviors>
             <Entry.Triggers>
                 <Trigger TargetType="Entry" Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Blue" />
                     <Setter Property="TextColor" Value="White" />
                 </Trigger>
-                <Trigger TargetType="Entry" Property="IsFocused" Value="False">
+                <Trigger TargetType="Entry" Property="IsFocused" Value="FALSE">
                     <Setter Property="BackgroundColor" Value="Green" />
                     <Setter Property="TextColor" Value="Yellow" />
-                </Trigger>                
+                </Trigger>
             </Entry.Triggers>
         </Entry>
-        <Entry x:Name="TxtEmail" Placeholder="Digite o seu email">
+        <Entry x:Name="TxtEmail" Placeholder="Digite o seu Email">
             <Entry.Triggers>
                 <EventTrigger Event="TextChanged">
                     <lib:EmailValidoTrigger />
                 </EventTrigger>
             </Entry.Triggers>
         </Entry>
-
         <Button Text="Enviar" TextColor="Black" BackgroundColor="Azure">
             <Button.Triggers>
                 <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference TxtNome}, Path=Text.Length}" Value="0">
@@ -38,8 +39,7 @@
                     <Setter Property="BackgroundColor" Value="Gray" />
                     <Setter Property="IsEnabled" Value="False" />
                 </DataTrigger>
-            </Button.Triggers>
+            </Button.Triggers>            
         </Button>
     </StackLayout>
-
 </ContentPage>
